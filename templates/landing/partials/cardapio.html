@@ -1,0 +1,41 @@
+{% load landing_extras %}
+<section class="menu" id="cardapio" data-screen-label="04 Cardápio">
+  <div class="l-container">
+    <div class="menu-head">
+      <div>
+        <span class="ey">Cardápio · 24 sabores</span>
+        <h2>Toque, escolha,<br><span class="alt">gele o dia.</span></h2>
+      </div>
+      <p class="sub">Sete categorias de gelados inteligentes. Todos prontos em 90 segundos no painel da loja-nave.</p>
+    </div>
+
+    <div class="tabs" role="tablist">
+      {% for c in cats %}
+        <button type="button"
+                class="tab{% if forloop.first %} active{% endif %}"
+                data-cat="{{ c.id }}"
+                role="tab"
+                aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
+          {{ c.nm }}<span class="cnt">{{ c.cnt }}</span>
+        </button>
+      {% endfor %}
+    </div>
+
+    <div class="menu-grid">
+      {% for p in products %}
+        <div class="menu-card" data-cat="{{ p.cat }}">
+          {% include "landing/partials/slot.html" with slot=slots|get_slot:p.slot %}
+          <div class="meta">
+            {% if p.tag %}<div class="badge-line"><span class="new">● {{ p.tag }}</span></div>{% endif %}
+            <div class="nm">{{ p.nm }}</div>
+            <div class="desc">{{ p.desc }}</div>
+            <div class="pr-row">
+              <span class="pr">{{ p.pr }}</span>
+              <span class="add"><i data-lucide="plus" style="width:18px;height:18px;color:#fff;stroke-width:1.75"></i></span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
