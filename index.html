@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frozen1000 | Sobremesas do Futuro & Shakes Galácticos</title>
+  <meta name="description" content="Frozen1000 é a nova experiência congelante e divertida da galáxia! Shakes espaciais, sobremesas sub-zero e cremosidade de outro planeta. Venha viver essa revolução com o Frizz!">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Frozen1000 | Sobremesas do Futuro & Shakes Galácticos">
+  <meta property="og:description" content="Descubra a revolução do sabor congelante com o mascote Frizz. Shakes, gelatos sub-zero e taças cósmicas!">
+  <meta property="og:image" content="assets/images/launch-1.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/frizz.png">
+
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans, Fredoka -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Top Announcement Bar
+       ======================================================================== -->
+  <aside class="announcement-bar" aria-label="Aviso promocional">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2 flex-wrap">
+        <span class="badge-promo"><i class="bi bi-stars"></i> NOVIDADE</span>
+        <span>Chegamos na sua galáxia! Use o cupom <strong>FRIZZ10</strong> para 10% OFF no 1º pedido.</span>
+        <a href="#clube-frizz" class="promo-link d-none d-md-inline">Pegar Cupom &rarr;</a>
+      </div>
+      <div class="d-none d-lg-flex align-items-center gap-3">
+        <span><i class="bi bi-truck text-info me-1"></i> Delivery Rápido em até 35min</span>
+        <span><i class="bi bi-shop text-warning me-1"></i> +40 Lojas no Brasil</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       2. Sticky Navigation Bar
+       ======================================================================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg main-navbar">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#inicio">
+          <img src="assets/images/logo-horizontal.png" alt="Frozen1000 Logo" width="180" height="48">
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Abrir menu de navegação">
+          <i class="bi bi-list fs-1 text-primary"></i>
+        </button>
+
+        <!-- Desktop Navigation Links -->
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cardapio">Cardápio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#frizz">O Frizz</a></li>
+            <li class="nav-item"><a class="nav-link" href="#conceito">Conceito</a></li>
+            <li class="nav-item"><a class="nav-link" href="#lojas">Lojas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#franquias">Franquias</a></li>
+            <li class="nav-item"><a class="nav-link" href="#clube-frizz">Clube Frizz</a></li>
+          </ul>
+
+          <!-- Desktop Actions -->
+          <div class="d-flex align-items-center gap-2">
+            <a href="#lojas" class="btn btn-f1-outline btn-sm">
+              <i class="bi bi-geo-alt-fill text-primary"></i> Lojas
+            </a>
+            <button class="btn btn-f1-pink btn-sm pulse-badge" data-bs-toggle="modal" data-bs-target="#deliveryModal">
+              <i class="bi bi-bag-heart-fill"></i> Pedir Agora
+              <span class="badge bg-white text-dark rounded-pill ms-1 cart-counter-badge" style="display: none;">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header border-bottom">
+      <img src="assets/images/logo-horizontal.png" alt="Frozen1000 Logo" height="38">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-direction-column justify-content-between">
+      <div>
+        <div class="p-3 bg-light rounded-4 mb-3 d-flex align-items-center gap-3">
+          <img src="assets/images/frizz-exp-happy.png" alt="Frizz" width="50">
+          <div>
+            <div class="fw-bold text-navy">Olá, explorador!</div>
+            <div class="small text-muted">Bora congelar a sede hoje?</div>
+          </div>
+        </div>
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item"><a class="nav-link" href="#inicio"><i class="bi bi-house-door me-2 text-primary"></i> Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cardapio"><i class="bi bi-cup-straw me-2 text-primary"></i> Cardápio Galáctico</a></li>
+          <li class="nav-item"><a class="nav-link" href="#frizz"><i class="bi bi-robot me-2 text-primary"></i> Conheça o Frizz</a></li>
+          <li class="nav-item"><a class="nav-link" href="#conceito"><i class="bi bi-stars me-2 text-primary"></i> O Conceito</a></li>
+          <li class="nav-item"><a class="nav-link" href="#lojas"><i class="bi bi-geo-alt me-2 text-primary"></i> Encontrar Lojas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#franquias"><i class="bi bi-briefcase me-2 text-primary"></i> Seja um Franqueado</a></li>
+          <li class="nav-item"><a class="nav-link" href="#clube-frizz"><i class="bi bi-gift me-2 text-primary"></i> Clube VIP & Cupom</a></li>
+        </ul>
+      </div>
+      <div class="pt-4 border-top mt-4">
+        <button class="btn btn-f1-pink w-100 mb-2" data-bs-toggle="modal" data-bs-target="#deliveryModal" data-bs-dismiss="offcanvas">
+          <i class="bi bi-bag-heart-fill me-2"></i> Fazer Pedido Online
+        </button>
+        <div class="text-center small text-muted mt-2">
+          Siga <strong>@frozen1000oficial</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       3. Hero Section
+       ======================================================================== -->
+  <section id="inicio" class="hero-section">
+    <!-- Ambient glowing cosmic blobs -->
+    <div class="hero-bg-blobs">
+      <div class="blob-1"></div>
+      <div class="blob-2"></div>
+    </div>
+
+    <div class="container position-relative">
+      <div class="row align-items-center gy-5">
+        <!-- Hero Left Column -->
+        <div class="col-lg-6 hero-content">
+          <div class="hero-subtag">
+            <i class="bi bi-snow2 text-primary fs-5"></i>
+            <span>-18°C DE PURA CREMOSIDADE • ZERO CRISTAIS DE GELO</span>
+          </div>
+
+          <h1 class="hero-title">
+            O Universo Mais <span class="text-gradient-pink">Congelante</span> & Divertido da <span class="text-gradient-blue">Galáxia!</span>
+          </h1>
+
+          <p class="hero-description">
+            Mergulhe em uma nova dimensão gastronômica com os shakes espaciais, sobremesas criogênicas e taças vulcânicas da Frozen1000. Feitos com frutas frescas selecionadas, caldas artesanais e cremosidade 1000% viciante.
+          </p>
+
+          <!-- Action CTAs -->
+          <div class="hero-ctas">
+            <a href="#cardapio" class="btn btn-f1-pink btn-lg">
+              <i class="bi bi-cup-straw"></i> Ver Cardápio Galáctico
+            </a>
+            <button class="btn btn-f1-outline btn-lg" data-bs-toggle="modal" data-bs-target="#deliveryModal">
+              <i class="bi bi-bicycle text-primary"></i> Pedir no Delivery
+            </button>
+          </div>
+
+          <!-- Trust Badges Bar -->
+          <div class="hero-trust-bar">
+            <div class="trust-item">
+              <div class="trust-icon">
+                <i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <div>
+                <div class="trust-text">4.9 / 5 Estrelas</div>
+                <div class="trust-sub">+15.000 clientes apaixonados</div>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon">
+                <i class="bi bi-lightning-charge-fill text-primary"></i>
+              </div>
+              <div>
+                <div class="trust-text">Preparo em 90s</div>
+                <div class="trust-sub">Ultra-rápido & fresquinho</div>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon">
+                <i class="bi bi-shield-check text-success"></i>
+              </div>
+              <div>
+                <div class="trust-text">100% Artesanal</div>
+                <div class="trust-sub">Sem aromas artificiais</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: High-Impact Visual Showcase -->
+        <div class="col-lg-6">
+          <div class="hero-visual-card text-center position-relative">
+            <!-- Floating Stickers -->
+            <div class="floating-badge badge-top-right">
+              <i class="bi bi-award-fill"></i> #1 MAIS PEDIDO • APPLE FROST
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <i class="bi bi-check-circle-fill"></i> 🍏 Maçã Verde & Creme Frizz
+            </div>
+
+            <div class="floating-badge badge-mid-right d-none d-md-flex">
+              <i class="bi bi-thermometer-snow"></i> -18°C Sub-Zero
+            </div>
+
+            <!-- Hero Image Wrapper with launch-1.png -->
+            <div class="hero-image-wrapper">
+              <img src="assets/images/launch-1.png" alt="Apple Frost Smash Shake Frozen1000" class="img-fluid" width="560" height="560">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. Marquee Running Ticker Ribbon
+       ======================================================================== -->
+  <div class="marquee-ribbon">
+    <div class="marquee-content">
+      <span><i class="bi bi-stars star"></i> SHAKES GALÁCTICOS</span>
+      <span>•</span>
+      <span class="highlight">GELATO SUB-ZERO</span>
+      <span>•</span>
+      <span><i class="bi bi-snow star"></i> SMOOTHIES CÓSMICOS</span>
+      <span>•</span>
+      <span class="highlight-pink">CRUNCH FROZEN BITES</span>
+      <span>•</span>
+      <span>TAÇAS VULCÂNICAS</span>
+      <span>•</span>
+      <span class="highlight">CLUBE FRIZZ VIP</span>
+      <span>•</span>
+      <span class="highlight-pink">100% ARTESANAL</span>
+      <span>•</span>
+      <span><i class="bi bi-stars star"></i> EXPERIÊNCIA 1000</span>
+      <span>•</span>
+      <span><i class="bi bi-stars star"></i> SHAKES GALÁCTICOS</span>
+      <span>•</span>
+      <span class="highlight">GELATO SUB-ZERO</span>
+      <span>•</span>
+      <span><i class="bi bi-snow star"></i> SMOOTHIES CÓSMICOS</span>
+      <span>•</span>
+      <span class="highlight-pink">CRUNCH FROZEN BITES</span>
+      <span>•</span>
+      <span>TAÇAS VULCÂNICAS</span>
+      <span>•</span>
+      <span class="highlight">CLUBE FRIZZ VIP</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       5. Brand Highlights / Value Pillars Section
+       ======================================================================== -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">
+          <i class="bi bi-patch-check-fill"></i> Diferenciais Galácticos
+        </div>
+        <h2 class="section-title">Por Que o Frozen1000 É Diferente de Tudo?</h2>
+        <p class="section-subtitle">
+          Criamos uma receita espacial que une ciência dos alimentos, ingredientes selecionados de verdade e uma atmosfera futurista que encanta do primeiro ao último gole.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Feature 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon-box feature-icon-blue">
+              <i class="bi bi-snow2"></i>
+            </div>
+            <h3 class="feature-title">Fórmula Sub-Zero</h3>
+            <p class="feature-text">
+              Nosso processo criogênico atinge a temperatura exata para evitar cristais de gelo, garantindo uma textura cremosa e aveludada incomparável.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon-box feature-icon-pink">
+              <i class="bi bi-heart-pulse-fill"></i>
+            </div>
+            <h3 class="feature-title">Frutas & Caldas Reais</h3>
+            <p class="feature-text">
+              Morangos frescos, maçã verde selecionada, mangas doces e chocolates nobres. Zero essências artificiais baratas. Sabor autêntico e vibrante.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon-box feature-icon-gold">
+              <i class="bi bi-robot"></i>
+            </div>
+            <h3 class="feature-title">A Magia do Frizz</h3>
+            <p class="feature-text">
+              Nosso astronauta cósmico traz um universo lúdico, copo colecionável, decorações instagramáveis e atendimento cheio de energia positiva.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon-box feature-icon-green">
+              <i class="bi bi-box2-heart-fill"></i>
+            </div>
+            <h3 class="feature-title">Embalagem Térmica</h3>
+            <p class="feature-text">
+              Pede no delivery com tranquilidade! Nossos copos térmicos aeroespaciais mantêm seu shake consistente e congelado até o momento de saborear.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cloud Transition Wave Divider -->
+  <div class="scalloped-divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,0 C150,90 350,-40 500,45 C650,120 900,10 1200,50 L1200,120 L0,120 Z" class="shape-fill-ice"></path>
+    </svg>
+  </div>
+
+  <!-- ========================================================================
+       6. Cardápio Galáctico (Menu Section - Milky Moo Style)
+       ======================================================================== -->
+  <section id="cardapio" class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">
+          <i class="bi bi-cup-hot-fill"></i> Sabores de Outro Planeta
+        </div>
+        <h2 class="section-title">Explore o Cardápio Galáctico</h2>
+        <p class="section-subtitle">
+          Clique no sabor para abrir nosso <strong>Personalizador Interativo</strong>. Escolha tamanho (300ml, 500ml ou 700ml), adicione toppings extras e veja o valor na hora!
+        </p>
+      </div>
+
+      <!-- Filter Buttons Nav -->
+      <nav class="menu-filter-nav" aria-label="Filtrar categorias do cardápio">
+        <button class="filter-btn active" data-filter="all">
+          <i class="bi bi-grid-fill"></i> Todos os Sabores
+        </button>
+        <button class="filter-btn" data-filter="shakes">
+          <i class="bi bi-cup-straw"></i> Shakes Galácticos
+        </button>
+        <button class="filter-btn" data-filter="bowls">
+          <i class="bi bi-pie-chart-fill"></i> Taças & Bowls
+        </button>
+        <button class="filter-btn" data-filter="slushes">
+          <i class="bi bi-water"></i> Slushes & Refreshes
+        </button>
+        <button class="filter-btn" data-filter="turbo">
+          <i class="bi bi-lightning-charge-fill"></i> Linha Turbo & Fit
+        </button>
+      </nav>
+
+      <!-- Products Grid -->
+      <div class="row g-4" id="productsGrid">
+        
+        <!-- Product 1: Apple Frost Smash (Hero Item) -->
+        <div class="col-md-6 col-lg-3 product-card-col" data-category="shakes">
+          <div class="product-card">
+            <div class="product-image-container">
+              <span class="product-badge badge-bestseller"><i class="bi bi-fire"></i> Mais Pedido</span>
+              <span class="product-temp-tag"><i class="bi bi-thermometer-snow"></i> -18°C</span>
+              <img src="assets/images/launch-1.png" alt="Apple Frost Smash" loading="lazy">
+            </div>
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="product-category-name">Shakes Galácticos</span>
+                <span class="product-rating"><i class="bi bi-star-fill"></i> 5.0</span>
+              </div>
+              <h3 class="product-title">Apple Frost Smash</h3>
+              <p class="product-desc">
+                Maçã verde ultra-fresca batida com creme de baunilha galáctica, fatias crocantes no topo e caldas sub-zero refrescantes.
+              </p>
+              <div class="product-footer">
+                <div class="product-price-box">
+                  <span class="price-label">A partir de</span>
+                  <span class="product-price">R$ 24,90</span>
+                </div>
+                <button class="btn-customize" data-action="customize" data-product-id="apple-frost">
+                  <i class="bi bi-sliders"></i> Personalizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Berry Nebula Swirl -->
+        <div class="col-md-6 col-lg-3 product-card-col" data-category="shakes">
+          <div class="product-card">
+            <div class="product-image-container">
+              <span class="product-badge badge-new"><i class="bi bi-stars"></i> Lançamento</span>
+              <span class="product-temp-tag"><i class="bi bi-thermometer-snow"></i> -18°C</span>
+              <img src="assets/images/berry-nebula.jpg" alt="Berry Nebula Swirl" loading="lazy">
+            </div>
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="product-category-name">Shakes Galácticos</span>
+                <span class="product-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+              </div>
+              <h3 class="product-title">Berry Nebula Swirl</h3>
+              <p class="product-desc">
+                Explosão de pitaya rosa neon com morangos frescos colhidos na hora, swirl de cream cheese aerado e coulis artesanal.
+              </p>
+              <div class="product-footer">
+                <div class="product-price-box">
+                  <span class="price-label">A partir de</span>
+                  <span class="product-price">R$ 26,90</span>
+                </div>
+                <button class="btn-customize" data-action="customize" data-product-id="berry-nebula">
+                  <i class="bi bi-sliders"></i> Personalizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: Blue Galaxy Cream -->
+        <div class="col-md-6 col-lg-3 product-card-col" data-category="shakes">
+          <div class="product-card">
+            <div class="product-image-container">
+              <span class="product-badge badge-special"><i class="bi bi-gem"></i> Exclusivo</span>
+              <span class="product-temp-tag"><i class="bi bi-thermometer-snow"></i> -18°C</span>
+              <img src="assets/images/blue-galaxy.jpg" alt="Blue Galaxy Cream" loading="lazy">
+            </div>
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="product-category-name">Shakes Galácticos</span>
+                <span class="product-rating"><i class="bi bi-star-fill"></i> 5.0</span>
+              </div>
+              <h3 class="product-title">Blue Galaxy Cream</h3>
+              <p class="product-desc">
+                Blue curaçao suave cítrico, gelato de nata pura, mirtilos frescos, nuvem de chantilly e glitter azul 100% comestível.
+              </p>
+              <div class="product-footer">
+                <div class="product-price-box">
+                  <span class="price-label">A partir de</span>
+                  <span class="product-price">R$ 25,90</span>
+                </div>
+                <button class="btn-customize" data-action="customize" data-product-id="blue-galaxy">
+                  <i class="bi bi-sliders"></i> Personalizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Choco Meteor Crunch -->
+        <div class="col-md-6 col-lg-3 product-card-col" data-category="shakes">
+          <div class="product-card">
+            <div class="product-image-container">
+              <span class="product-badge badge-bestseller"><i class="bi bi-fire"></i> Favorito</span>
+              <span class="product-temp-tag"><i class="bi bi-thermometer-snow"></i> -18°C</span>
+              <img src="assets/images/choco-meteor.jpg" alt="Choco Meteor Crunch" loading="lazy">
+            </div>
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="product-category-name">Shakes Galácticos</span>
+                <span class="product-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+              </div>
+              <h3 class="product-title">Choco Meteor</h3>
+              <p class="product-desc">
+                Chocolate belga 70%, pedaços crocantes de brownie artesanal, avelãs tostadas e calda quente-fria de caramelo salgado.
+              </p>
+              <div class="product-footer">
+                <div class="product-price-box">
+                  <span class="price-label">A partir de</span>
+                  <span class="product-price">R$ 27,90</span>
+                </div>
+                <button class="btn-customize" data-action="customize" data-product-id="choco-meteor">
+                  <i class="bi bi-sliders"></i> Personalizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5: Mango Solar Burst -->
+        <div class="col-md-6 col-lg-3 product-card-col" data-category="slushes">
+          <div class="product-card">
+            <div class="product-image-container">
+              <span class="product-badge badge-new"><i class="bi bi-sun-fill"></i> Tropical</span>
+              <span class="product-temp-tag"><i class="bi bi-thermometer-snow"></i> -16°C</span>
+              <img src="assets/images/mango-solar.jpg" alt="Mango Solar Burst" loading="lazy">
+            </div>
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="product-category-name">Slushes & Refreshes</span>
+                <span class="product-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+              </div>
+              <h3 class="product-title">Mango Solar Burst</h3>
+              <p class="product-desc">
+                Manga Palmer doce no ponto, maracujá fresco com sementinhas crocantes, toque de creme de coco e bolhas de tangerina.
+              </p>
+              <div class="product-footer">
+                <div class="product-price-box">
+                  <span class="price-label">A partir de</span>
+                  <span class="product-price">R$ 23,90</span>
+                </div>
+                <button class="btn-customize" data-action="customize" data-product-id="mango-solar">
+                  <i class="bi bi-sliders"></i> Personalizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6: Pistache Supernova -->
+        <div class="col-md-6 col-lg-3 product-card-col" data-category="bowls">
+          <div class="product-card">
+            <div class="product-image-container">
+              <span class="product-badge badge-special"><i class="bi bi-gem"></i> Premium</span>
+              <span class="product-temp-tag"><i class="bi bi-thermometer-snow"></i> -18°C</span>
+              <img src="assets/images/blue-galaxy.jpg" alt="Pistache Supernova" loading="lazy">
+            </div>
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="product-category-name">Taças & Bowls</span>
+                <span class="product-rating"><i class="bi bi-star-fill"></i> 5.0</span>
+              </div>
+              <h3 class="product-title">Pistache Supernova</h3>
+              <p class="product-desc">
+                Pistache puro de Bronte, ganache quente de chocolate branco nobre, amêndoas laminadas e base de gelato zero cristais.
+              </p>
+              <div class="product-footer">
+                <div class="product-price-box">
+                  <span class="price-label">A partir de</span>
+                  <span class="product-price">R$ 29,90</span>
+                </div>
+                <button class="btn-customize" data-action="customize" data-product-id="pistache-supernova">
+                  <i class="bi bi-sliders"></i> Personalizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7: Churros Criogênico -->
+        <div class="col-md-6 col-lg-3 product-card-col" data-category="bowls">
+          <div class="product-card">
+            <div class="product-image-container">
+              <span class="product-badge badge-bestseller"><i class="bi bi-heart-fill"></i> Delícia</span>
+              <span class="product-temp-tag"><i class="bi bi-thermometer-snow"></i> -18°C</span>
+              <img src="assets/images/choco-meteor.jpg" alt="Churros Criogênico" loading="lazy">
+            </div>
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="product-category-name">Taças & Bowls</span>
+                <span class="product-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+              </div>
+              <h3 class="product-title">Churros Criogênico</h3>
+              <p class="product-desc">
+                Doce de leite cremoso artesanal, canela aromática, mini churros crocantes assados na hora e pitada de flor de sal cósmica.
+              </p>
+              <div class="product-footer">
+                <div class="product-price-box">
+                  <span class="price-label">A partir de</span>
+                  <span class="product-price">R$ 24,90</span>
+                </div>
+                <button class="btn-customize" data-action="customize" data-product-id="churros-cryo">
+                  <i class="bi bi-sliders"></i> Personalizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8: Açaí Lunar Protein (Fit & Zero) -->
+        <div class="col-md-6 col-lg-3 product-card-col" data-category="turbo">
+          <div class="product-card">
+            <div class="product-image-container">
+              <span class="product-badge badge-turbo"><i class="bi bi-lightning-fill"></i> 24g Whey</span>
+              <span class="product-temp-tag"><i class="bi bi-thermometer-snow"></i> -16°C</span>
+              <img src="assets/images/berry-nebula.jpg" alt="Açaí Lunar Protein" loading="lazy">
+            </div>
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="product-category-name">Linha Turbo & Fit</span>
+                <span class="product-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+              </div>
+              <h3 class="product-title">Açaí Lunar Protein</h3>
+              <p class="product-desc">
+                Açaí puro sem xarope batido com Whey Protein Isolado, morangos fatiados, pasta de amendoim integral e granola sem açúcar.
+              </p>
+              <div class="product-footer">
+                <div class="product-price-box">
+                  <span class="price-label">A partir de</span>
+                  <span class="product-price">R$ 28,90</span>
+                </div>
+                <button class="btn-customize" data-action="customize" data-product-id="acai-turbo">
+                  <i class="bi bi-sliders"></i> Personalizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Menu Callout -->
+      <div class="text-center mt-5">
+        <p class="text-muted mb-3">Quer experimentar todos? Peça nosso combo especial para viagem!</p>
+        <button class="btn btn-f1-pink btn-lg" data-bs-toggle="modal" data-bs-target="#deliveryModal">
+          <i class="bi bi-bag-check-fill"></i> Fazer Pedido Online Agora
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. Meet the Mascot: Frizz! (Interactive Character Section)
+       ======================================================================== -->
+  <section id="frizz" class="mascot-section">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        
+        <!-- Left: Interactive Mascot Box -->
+        <div class="col-lg-6">
+          <div class="mascot-interactive-box">
+            <!-- Animated Speech Bubble -->
+            <div class="mascot-speech-bubble" id="frizzSpeechBubble">
+              “E aí, terráqueo! Nada como um shake ultra-congelado para iluminar o seu dia a 1000%!”
+            </div>
+
+            <!-- Mascot Main Visual -->
+            <div class="mascot-display-wrap">
+              <img src="assets/images/frizz-full.png" alt="Mascote Frizz Frozen1000" id="frizzMainImg" class="img-fluid mascot-main-img" width="280">
+            </div>
+
+            <!-- Mood Buttons Switcher -->
+            <div class="text-center mt-3 mb-2 small text-info fw-bold text-uppercase">
+              <i class="bi bi-magic"></i> Clique nas reações para interagir com o Frizz:
+            </div>
+            <div class="mood-buttons-grid">
+              <button class="btn-mood active" data-mood="happy">
+                <img src="assets/images/frizz-exp-happy.png" alt="Feliz" class="mood-icon">
+                <span>Frizz Feliz</span>
+              </button>
+              <button class="btn-mood" data-mood="wink">
+                <img src="assets/images/frizz-exp-wink.png" alt="Piscadinha" class="mood-icon">
+                <span>Piscadinha Cósmica</span>
+              </button>
+              <button class="btn-mood" data-mood="wow">
+                <img src="assets/images/frizz-exp-wow.png" alt="Chocado" class="mood-icon">
+                <span>Surpreso de Sabor</span>
+              </button>
+              <button class="btn-mood" data-mood="smile">
+                <img src="assets/images/frizz-exp-smile.png" alt="Sorriso" class="mood-icon">
+                <span>Sorriso Geladinho</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Frizz Story & Identity Sheet -->
+        <div class="col-lg-6 text-white ps-lg-5">
+          <div class="mascot-info-card">
+            <div class="section-pill mb-3" style="background: rgba(110, 208, 246, 0.2); color: var(--f1-cyan); border-color: var(--f1-cyan);">
+              <i class="bi bi-stars"></i> Sobre o Mascote Oficial
+            </div>
+            <h2 class="display-5 fw-bold text-white mb-3">Conheça o Capitão Frizz! 🚀🍦</h2>
+            <p class="text-info fs-5 fw-semibold mb-4">
+              "Amigável, moderno e cheio de energia, ele reforça nossa identidade de forma leve e marcante."
+            </p>
+            <p style="color: #BED8F6;" class="mb-4">
+              Diretamente dos anéis de gelo cósmicos, o Frizz pousou na Terra com uma missão muito nobre: banir os dias quentes e chatos através de sobremesas hiper-cremosas e muita diversão. Com seu capacete pressurizado que protege o sorvete em gravidade zero e sua antena de sintonização de alegria, ele é o guia oficial de todo cliente Frozen1000.
+            </p>
+
+            <!-- Traits Badges -->
+            <div class="mb-4">
+              <span class="mascot-trait-badge"><i class="bi bi-emoji-smile"></i> Divertido</span>
+              <span class="mascot-trait-badge"><i class="bi bi-people"></i> Amigável</span>
+              <span class="mascot-trait-badge"><i class="bi bi-lightbulb"></i> Inovador</span>
+              <span class="mascot-trait-badge"><i class="bi bi-snow"></i> Refrescante</span>
+              <span class="mascot-trait-badge"><i class="bi bi-heart"></i> Próximo do Cliente</span>
+            </div>
+
+            <!-- Frizz Specs Table -->
+            <div class="bg-dark bg-opacity-50 p-3 rounded-4 border border-secondary border-opacity-25">
+              <div class="mascot-stat-row">
+                <span class="stat-label"><i class="bi bi-rulers me-2"></i> Altura:</span>
+                <span class="stat-value">3 copos de 700ml</span>
+              </div>
+              <div class="mascot-stat-row">
+                <span class="stat-label"><i class="bi bi-lightning-charge me-2"></i> Superpoder:</span>
+                <span class="stat-value">Congelar o calor em 0.3 segundos</span>
+              </div>
+              <div class="mascot-stat-row">
+                <span class="stat-label"><i class="bi bi-chat-quote me-2"></i> Lema Favorito:</span>
+                <span class="stat-value">"Mais sabor, menos gravidade!"</span>
+              </div>
+              <div class="mascot-stat-row border-0 pb-0">
+                <span class="stat-label"><i class="bi bi-controller me-2"></i> Hobby Espacial:</span>
+                <span class="stat-value">Manobras de skate nos anéis de Saturno</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Cloud Transition Wave Divider -->
+  <div class="scalloped-divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,0 C150,90 350,-40 500,45 C650,120 900,10 1200,50 L1200,120 L0,120 Z" class="shape-fill-white"></path>
+    </svg>
+  </div>
+
+  <!-- ========================================================================
+       8. O Conceito & Store Atmosphere Section
+       ======================================================================== -->
+  <section id="conceito" class="concept-section">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        
+        <!-- Left: Modern Store Mockup -->
+        <div class="col-lg-6">
+          <div class="store-mockup-wrapper">
+            <img src="assets/images/store-interior.jpg" alt="Loja Moderna Frozen1000" class="img-fluid" width="650">
+          </div>
+        </div>
+
+        <!-- Right: Concept Details -->
+        <div class="col-lg-6 ps-lg-5">
+          <div class="section-pill">
+            <i class="bi bi-shop"></i> Experiência em Loja
+          </div>
+          <h2 class="section-title">Muito Mais Que Uma Loja de Sobremesas</h2>
+          <p class="section-subtitle">
+            Cada unidade da Frozen1000 foi desenhada para ser um refúgio futurista, instagramável e acolhedor para amigos, famílias e pets.
+          </p>
+
+          <ul class="concept-perks-list">
+            <li>
+              <div class="concept-perk-icon"><i class="bi bi-camera-fill"></i></div>
+              <div>
+                <h3 class="concept-perk-title">Cenários 100% Instagramáveis</h3>
+                <p class="concept-perk-desc">Neons azuis e rosas vibrantes, estações de fotos com o Frizz e iluminação pensada para o feed perfeito.</p>
+              </div>
+            </li>
+            <li>
+              <div class="concept-perk-icon"><i class="bi bi-speedometer2"></i></div>
+              <div>
+                <h3 class="concept-perk-title">Preparo Rápido em Linha Cósmica</h3>
+                <p class="concept-perk-desc">Totens de autoatendimento touch-screen e baristas especialistas prontos para entregar seu shake em 90 segundos.</p>
+              </div>
+            </li>
+            <li>
+              <div class="concept-perk-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+              <div>
+                <h3 class="concept-perk-title">Espaço Pet-Friendly</h3>
+                <p class="concept-perk-desc">Seu pet é muito bem-vindo! Temos o picolé especial FrizzPet natural, sem lactose e aprovado por veterinários.</p>
+              </div>
+            </li>
+            <li>
+              <div class="concept-perk-icon"><i class="bi bi-music-note-beamed"></i></div>
+              <div>
+                <h3 class="concept-perk-title">Trilha Sonora Espacial</h3>
+                <p class="concept-perk-desc">Playlists exclusivas com pop, indie e lofi upbeat para embalar conversas divertidas e encontros inesquecíveis.</p>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. Store Locator Section (Encontre uma Frozen1000)
+       ======================================================================== -->
+  <section id="lojas" class="stores-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">
+          <i class="bi bi-geo-alt-fill"></i> Rede de Lojas
+        </div>
+        <h2 class="section-title">Encontre a Frozen1000 Mais Perto de Você</h2>
+        <p class="section-subtitle">
+          Estamos presentes nas principais capitais e shoppings do país. Busque pela sua cidade ou bairro:
+        </p>
+      </div>
+
+      <!-- Search Input -->
+      <div class="store-search-bar">
+        <i class="bi bi-search store-search-icon"></i>
+        <input type="text" id="storeSearchInput" class="store-search-input" placeholder="Digite sua cidade, shopping ou bairro...">
+      </div>
+
+      <!-- City Chips Filter -->
+      <div class="city-filter-chips">
+        <button class="city-chip active" data-city="all">Todas as Cidades</button>
+        <button class="city-chip" data-city="sp">São Paulo / SP</button>
+        <button class="city-chip" data-city="rj">Rio de Janeiro / RJ</button>
+        <button class="city-chip" data-city="pr">Curitiba / PR</button>
+        <button class="city-chip" data-city="mg">Belo Horizonte / MG</button>
+        <button class="city-chip" data-city="df">Brasília / DF</button>
+        <button class="city-chip" data-city="ba">Salvador / BA</button>
+      </div>
+
+      <div class="text-center mb-4 small fw-bold text-muted" id="storeResultCount">
+        6 lojas encontradas no Brasil
+      </div>
+
+      <!-- Store Cards Grid -->
+      <div class="row g-4" id="storeCardsGrid">
+        
+        <!-- Store 1: São Paulo -->
+        <div class="col-md-6 col-lg-4 store-card-col" data-city="sp">
+          <div class="store-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="store-status-badge status-open"><i class="bi bi-circle-fill fs-6 text-success me-1"></i> Aberto Agora</span>
+              <span class="small fw-bold text-muted"><i class="bi bi-clock"></i> 10h às 22h</span>
+            </div>
+            <h3 class="store-name">Shopping Morumbi - SP</h3>
+            <p class="store-address">Av. Roque Petroni Júnior, 1089 - Piso Lazer (Próximo ao Cinema) - São Paulo, SP</p>
+            <div class="store-amenities">
+              <span class="amenity-tag"><i class="bi bi-bicycle"></i> iFood</span>
+              <span class="amenity-tag"><i class="bi bi-bag"></i> Retirada</span>
+              <span class="amenity-tag"><i class="bi bi-cup-straw"></i> Dine-in</span>
+              <span class="amenity-tag"><i class="bi bi-wifi"></i> Wi-Fi</span>
+            </div>
+            <div class="store-actions-row">
+              <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-f1-outline btn-sm flex-fill">
+                <i class="bi bi-compass"></i> Como Chegar
+              </a>
+              <button class="btn btn-f1-pink btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#deliveryModal">
+                <i class="bi bi-cart"></i> Pedir Aqui
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Store 2: Rio de Janeiro -->
+        <div class="col-md-6 col-lg-4 store-card-col" data-city="rj">
+          <div class="store-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="store-status-badge status-open"><i class="bi bi-circle-fill fs-6 text-success me-1"></i> Aberto Agora</span>
+              <span class="small fw-bold text-muted"><i class="bi bi-clock"></i> 10h às 22h</span>
+            </div>
+            <h3 class="store-name">BarraShopping - RJ</h3>
+            <p class="store-address">Av. das Américas, 4666 - Nível Lagoa (Em frente à Praça Central) - Rio de Janeiro, RJ</p>
+            <div class="store-amenities">
+              <span class="amenity-tag"><i class="bi bi-bicycle"></i> iFood</span>
+              <span class="amenity-tag"><i class="bi bi-bag"></i> Retirada</span>
+              <span class="amenity-tag"><i class="bi bi-cup-straw"></i> Dine-in</span>
+            </div>
+            <div class="store-actions-row">
+              <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-f1-outline btn-sm flex-fill">
+                <i class="bi bi-compass"></i> Como Chegar
+              </a>
+              <button class="btn btn-f1-pink btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#deliveryModal">
+                <i class="bi bi-cart"></i> Pedir Aqui
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Store 3: Curitiba -->
+        <div class="col-md-6 col-lg-4 store-card-col" data-city="pr">
+          <div class="store-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="store-status-badge status-open"><i class="bi bi-circle-fill fs-6 text-success me-1"></i> Aberto Agora</span>
+              <span class="small fw-bold text-muted"><i class="bi bi-clock"></i> 10h às 22h</span>
+            </div>
+            <h3 class="store-name">Pátio Batel - Curitiba</h3>
+            <p class="store-address">Av. do Batel, 1868 - Piso L3 Gourmet - Curitiba, PR</p>
+            <div class="store-amenities">
+              <span class="amenity-tag"><i class="bi bi-bicycle"></i> iFood</span>
+              <span class="amenity-tag"><i class="bi bi-cup-straw"></i> Dine-in</span>
+              <span class="amenity-tag"><i class="bi bi-heart"></i> Pet Friendly</span>
+            </div>
+            <div class="store-actions-row">
+              <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-f1-outline btn-sm flex-fill">
+                <i class="bi bi-compass"></i> Como Chegar
+              </a>
+              <button class="btn btn-f1-pink btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#deliveryModal">
+                <i class="bi bi-cart"></i> Pedir Aqui
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Store 4: Belo Horizonte -->
+        <div class="col-md-6 col-lg-4 store-card-col" data-city="mg">
+          <div class="store-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="store-status-badge status-open"><i class="bi bi-circle-fill fs-6 text-success me-1"></i> Aberto Agora</span>
+              <span class="small fw-bold text-muted"><i class="bi bi-clock"></i> 10h às 22h</span>
+            </div>
+            <h3 class="store-name">BH Shopping - BH</h3>
+            <p class="store-address">BR-356, 3049 - Piso Mariana (Espaço Gourmet) - Belvedere, Belo Horizonte, MG</p>
+            <div class="store-amenities">
+              <span class="amenity-tag"><i class="bi bi-bicycle"></i> iFood</span>
+              <span class="amenity-tag"><i class="bi bi-bag"></i> Retirada</span>
+              <span class="amenity-tag"><i class="bi bi-cup-straw"></i> Dine-in</span>
+            </div>
+            <div class="store-actions-row">
+              <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-f1-outline btn-sm flex-fill">
+                <i class="bi bi-compass"></i> Como Chegar
+              </a>
+              <button class="btn btn-f1-pink btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#deliveryModal">
+                <i class="bi bi-cart"></i> Pedir Aqui
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Store 5: Brasília -->
+        <div class="col-md-6 col-lg-4 store-card-col" data-city="df">
+          <div class="store-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="store-status-badge status-open"><i class="bi bi-circle-fill fs-6 text-success me-1"></i> Aberto Agora</span>
+              <span class="small fw-bold text-muted"><i class="bi bi-clock"></i> 10h às 22h</span>
+            </div>
+            <h3 class="store-name">ParkShopping - Brasília</h3>
+            <p class="store-address">SMAS Trecho 1 - Piso 2 (Próximo à Praça de Alimentação) - Guará, Brasília, DF</p>
+            <div class="store-amenities">
+              <span class="amenity-tag"><i class="bi bi-bicycle"></i> iFood</span>
+              <span class="amenity-tag"><i class="bi bi-cup-straw"></i> Dine-in</span>
+              <span class="amenity-tag"><i class="bi bi-wifi"></i> Wi-Fi</span>
+            </div>
+            <div class="store-actions-row">
+              <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-f1-outline btn-sm flex-fill">
+                <i class="bi bi-compass"></i> Como Chegar
+              </a>
+              <button class="btn btn-f1-pink btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#deliveryModal">
+                <i class="bi bi-cart"></i> Pedir Aqui
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Store 6: Salvador -->
+        <div class="col-md-6 col-lg-4 store-card-col" data-city="ba">
+          <div class="store-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="store-status-badge status-open"><i class="bi bi-circle-fill fs-6 text-success me-1"></i> Aberto Agora</span>
+              <span class="small fw-bold text-muted"><i class="bi bi-clock"></i> 09h às 22h</span>
+            </div>
+            <h3 class="store-name">Salvador Shopping - BA</h3>
+            <p class="store-address">Av. Tancredo Neves, 3133 - Piso L1 - Caminho das Árvores, Salvador, BA</p>
+            <div class="store-amenities">
+              <span class="amenity-tag"><i class="bi bi-bicycle"></i> iFood</span>
+              <span class="amenity-tag"><i class="bi bi-cup-straw"></i> Dine-in</span>
+              <span class="amenity-tag"><i class="bi bi-heart"></i> Pet Friendly</span>
+            </div>
+            <div class="store-actions-row">
+              <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-f1-outline btn-sm flex-fill">
+                <i class="bi bi-compass"></i> Como Chegar
+              </a>
+              <button class="btn btn-f1-pink btn-sm flex-fill" data-bs-toggle="modal" data-bs-target="#deliveryModal">
+                <i class="bi bi-cart"></i> Pedir Aqui
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       10. Franchise / Seja um Franqueado (Milky Moo Scale Conversion)
+       ======================================================================== -->
+  <section id="franquias" class="franchise-section">
+    <div class="container">
+      
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <div class="section-pill mb-3" style="background: rgba(110, 208, 246, 0.2); color: var(--f1-cyan); border-color: var(--f1-cyan);">
+          <i class="bi bi-briefcase-fill"></i> Expansão Comercial
+        </div>
+        <h2 class="display-4 fw-bold text-white mb-3">Seja um Franqueado Frozen1000</h2>
+        <p class="text-info fs-5">
+          Invista na rede de sobremesas que mais cresce no Brasil, com alta margem de lucro, suporte 360° e produto altamente viralizável.
+        </p>
+      </div>
+
+      <!-- Financial Metrics Grid -->
+      <div class="row g-4 mb-5">
+        <div class="col-6 col-lg-3">
+          <div class="franchise-stat-box">
+            <div class="stat-number">R$ 90k+</div>
+            <p class="stat-desc">Faturamento médio mensal por unidade</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="franchise-stat-box">
+            <div class="stat-number">14 a 18</div>
+            <p class="stat-desc">Meses de retorno estimado (Payback)</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="franchise-stat-box">
+            <div class="stat-number">22% a 26%</div>
+            <p class="stat-desc">Margem de lucro líquido operacional</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="franchise-stat-box">
+            <div class="stat-number">100%</div>
+            <p class="stat-desc">Suporte na escolha do ponto & implantação</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Investment Calculator Card -->
+      <div class="calculator-card">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6">
+            <h3 class="fw-bold mb-2">Simulador de Modelo de Negócio</h3>
+            <p class="text-muted mb-4">Selecione o formato ideal para seu perfil de investimento:</p>
+            
+            <div class="d-flex gap-3 mb-4">
+              <button class="calc-toggle-btn active" id="calcKioskBtn">
+                <i class="bi bi-shop me-2"></i> Quiosque Shopping
+              </button>
+              <button class="calc-toggle-btn" id="calcStoreBtn">
+                <i class="bi bi-building me-2"></i> Loja de Rua / Shopping
+              </button>
+            </div>
+
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex justify-content-between p-3 bg-light rounded-3">
+                <span class="fw-semibold text-muted">Área Mínima:</span>
+                <span class="fw-bold text-navy" id="calcArea">9m² a 15m²</span>
+              </div>
+              <div class="d-flex justify-content-between p-3 bg-light rounded-3">
+                <span class="fw-semibold text-muted">Investimento Total Estimado:</span>
+                <span class="fw-bold text-primary fs-5" id="calcInvest">R$ 145.000</span>
+              </div>
+              <div class="d-flex justify-content-between p-3 bg-light rounded-3">
+                <span class="fw-semibold text-muted">Faturamento Mensal Estimado:</span>
+                <span class="fw-bold text-success fs-5" id="calcRevenue">R$ 65.000 a R$ 90.000</span>
+              </div>
+              <div class="d-flex justify-content-between p-3 bg-light rounded-3">
+                <span class="fw-semibold text-muted">Prazo Estimado de Payback:</span>
+                <span class="fw-bold text-navy" id="calcPayback">14 a 18 meses</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 ps-lg-5 text-center">
+            <div class="p-4 bg-light rounded-4 border">
+              <img src="assets/images/frizz-exp-wink.png" alt="Frizz Franqueado" width="100" class="mb-3">
+              <h4 class="fw-bold mb-2">Pronto Para Decolar Conosco?</h4>
+              <p class="small text-muted mb-4">
+                Receba nossa apresentação comercial completa com DRE detalhado, custos de insumos e plano de expansão 2026.
+              </p>
+              <button class="btn btn-f1-pink btn-lg w-100 mb-3" data-bs-toggle="modal" data-bs-target="#franchiseModal">
+                <i class="bi bi-envelope-paper-fill me-2"></i> Quero Receber a Apresentação
+              </button>
+              <div class="small text-muted">
+                <i class="bi bi-shield-lock-fill text-primary"></i> Seus dados estão 100% seguros conosco.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       11. Clube Frizz & Interactive Coupon Scratcher
+       ======================================================================== -->
+  <section id="clube-frizz" class="app-section">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        
+        <!-- Left: App perks -->
+        <div class="col-lg-6">
+          <div class="section-pill mb-3" style="background: rgba(110, 208, 246, 0.2); color: var(--f1-cyan); border-color: var(--f1-cyan);">
+            <i class="bi bi-phone"></i> Fidelidade Galáctica
+          </div>
+          <h2 class="display-5 fw-bold text-white mb-3">Baixe o App & Entre no Clube Frizz VIP!</h2>
+          <p class="text-info fs-5 mb-4">
+            Acumule FrizzCoins a cada compra, troque por shakes grátis e receba convites para provar sabores secretos antes de todo mundo!
+          </p>
+
+          <div class="d-flex flex-column gap-3 mb-4">
+            <div class="d-flex align-items-center gap-3 text-white">
+              <div class="feature-icon-box feature-icon-pink m-0" style="width: 48px; height: 48px; font-size: 1.3rem;">
+                <i class="bi bi-gift-fill"></i>
+              </div>
+              <div>
+                <div class="fw-bold">1 Shake Grátis no Mês do seu Aniversário</div>
+                <div class="small text-info">Comemore com sua taça favorita por nossa conta!</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 text-white">
+              <div class="feature-icon-box feature-icon-blue m-0" style="width: 48px; height: 48px; font-size: 1.3rem;">
+                <i class="bi bi-cash-coin"></i>
+              </div>
+              <div>
+                <div class="fw-bold">10% de Cashback em Todas as Compras</div>
+                <div class="small text-info">Suas compras viram créditos instantâneos no aplicativo.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3 flex-wrap">
+            <button class="btn btn-f1-outline text-white bg-dark border-white" onclick="showToast('📲 Redirecionando para a Google Play Store!')">
+              <i class="bi bi-google-play me-2"></i> Google Play
+            </button>
+            <button class="btn btn-f1-outline text-white bg-dark border-white" onclick="showToast('🍏 Redirecionando para a Apple App Store!')">
+              <i class="bi bi-apple me-2"></i> App Store
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Coupon Box -->
+        <div class="col-lg-6">
+          <div class="scratch-coupon-box">
+            <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-2">
+              <i class="bi bi-lightning-fill"></i> PRESENTE PARA NOVOS CLIENTES
+            </span>
+            <h3 class="fw-bold text-white mb-2">Cupom de 10% de Desconto</h3>
+            <p class="text-white-50 small mb-3">Válido no primeiro pedido online ou no balcão da loja:</p>
+
+            <div class="coupon-reveal-area" id="couponScratchArea">
+              <div class="small text-muted mb-1 text-uppercase fw-bold">Seu Código Promocional:</div>
+              <div class="coupon-code-text" id="couponCodeText">FRIZZ10</div>
+              <div class="small text-muted mt-1">10% OFF em qualquer shake ou bowl</div>
+            </div>
+
+            <button class="btn btn-f1-pink btn-lg w-100" id="btnCopyCoupon">
+              <i class="bi bi-clipboard"></i> Copiar Cupom
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       12. Comunidade #MundoFrozen1000 (Social Wall UGC)
+       ======================================================================== -->
+  <section class="social-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">
+          <i class="bi bi-instagram"></i> Feed da Galáxia
+        </div>
+        <h2 class="section-title">Quem Experimenta, Se Apaixona!</h2>
+        <p class="section-subtitle">
+          Marque <strong>@frozen1000oficial</strong> e use a hashtag <strong>#MundoFrozen1000</strong> para aparecer no nosso feed galáctico:
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- UGC 1 -->
+        <div class="col-6 col-md-3">
+          <div class="social-card">
+            <div class="social-img-wrap">
+              <img src="assets/images/launch-1.png" alt="Foto cliente 1" loading="lazy">
+              <div class="social-overlay">
+                <i class="bi bi-instagram"></i>
+              </div>
+            </div>
+            <div class="social-card-body">
+              <span class="social-user">@carol.viaja</span>
+              <span class="social-likes"><i class="bi bi-heart-fill"></i> 1.2k</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- UGC 2 -->
+        <div class="col-6 col-md-3">
+          <div class="social-card">
+            <div class="social-img-wrap">
+              <img src="assets/images/berry-nebula.jpg" alt="Foto cliente 2" loading="lazy">
+              <div class="social-overlay">
+                <i class="bi bi-instagram"></i>
+              </div>
+            </div>
+            <div class="social-card-body">
+              <span class="social-user">@lucas_tech</span>
+              <span class="social-likes"><i class="bi bi-heart-fill"></i> 940</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- UGC 3 -->
+        <div class="col-6 col-md-3">
+          <div class="social-card">
+            <div class="social-img-wrap">
+              <img src="assets/images/blue-galaxy.jpg" alt="Foto cliente 3" loading="lazy">
+              <div class="social-overlay">
+                <i class="bi bi-instagram"></i>
+              </div>
+            </div>
+            <div class="social-card-body">
+              <span class="social-user">@mariana_fit</span>
+              <span class="social-likes"><i class="bi bi-heart-fill"></i> 2.1k</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- UGC 4 -->
+        <div class="col-6 col-md-3">
+          <div class="social-card">
+            <div class="social-img-wrap">
+              <img src="assets/images/choco-meteor.jpg" alt="Foto cliente 4" loading="lazy">
+              <div class="social-overlay">
+                <i class="bi bi-instagram"></i>
+              </div>
+            </div>
+            <div class="social-card-body">
+              <span class="social-user">@pedro_vibes</span>
+              <span class="social-likes"><i class="bi bi-heart-fill"></i> 1.8k</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="btn btn-f1-outline">
+          <i class="bi bi-instagram text-danger"></i> Seguir @frozen1000oficial no Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       13. FAQ Section (Perguntas Frequentes)
+       ======================================================================== -->
+  <section class="faq-section">
+    <div class="container max-w-800">
+      <div class="section-header">
+        <div class="section-pill">
+          <i class="bi bi-question-circle-fill"></i> Dúvidas Frequentes
+        </div>
+        <h2 class="section-title">Tudo O Que Você Precisa Saber</h2>
+        <p class="section-subtitle">
+          Tire suas dúvidas sobre opções sem lactose, delivery seguro, embalagens e franquias:
+        </p>
+      </div>
+
+      <div class="accordion" id="frozenFaqAccordion">
+        
+        <!-- Item 1 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+              Vocês possuem opções sem lactose ou veganas?
+            </button>
+          </h3>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#frozenFaqAccordion">
+            <div class="accordion-body">
+              <strong>Sim, com certeza!</strong> Temos uma linha completa de shakes preparados com leite vegetal de aveia ou coco artesanal, além de todos os nossos Slushes & Refreshes de frutas naturais e açaí puro que são naturalmente livres de leite animal e veganos. No cardápio você pode filtrar pela categoria <em>Linha Turbo & Fit</em>.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+              Como o shake chega congelado e perfeito no delivery?
+            </button>
+          </h3>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#frozenFaqAccordion">
+            <div class="accordion-body">
+              Utilizamos copos térmicos aeroespaciais de camada dupla e selagem criogênica com tampas anti-vazamento. Nossos parceiros do iFood e entregadores possuem mochilas isoladas que mantêm a temperatura a -18°C durante trajetos de até 40 minutos.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+              Quais são os tamanhos de copos disponíveis?
+            </button>
+          </h3>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#frozenFaqAccordion">
+            <div class="accordion-body">
+              Oferecemos 3 tamanhos generosos: <strong>300ml</strong> (tamanho individual clássico), <strong>500ml</strong> (o mais pedido) e <strong>700ml</strong> (Tamanho Galáctico para quem ama uma super dose de gostosura!). Você pode escolher o tamanho no personalizador.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+              Como funciona o programa de pontos Clube Frizz?
+            </button>
+          </h3>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#frozenFaqAccordion">
+            <div class="accordion-body">
+              A cada R$ 1,00 gasto em qualquer loja ou delivery oficial, você ganha 1 FrizzCoin. Acumulando 50 FrizzCoins você já pode resgatar toppings extras grátis, e com 150 FrizzCoins você ganha um shake de 500ml completo!
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+              Como posso me candidatar a ser um franqueado da marca?
+            </button>
+          </h3>
+          <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#frozenFaqAccordion">
+            <div class="accordion-body">
+              Basta clicar na aba <a href="#franquias" class="text-primary fw-bold">Franquias</a> aqui no site e preencher o formulário rápido. Nossa equipe de expansão entrará em contato em até 24 horas para apresentar nosso modelo de quiosque e loja de rua.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Cloud Transition Wave Divider -->
+  <div class="scalloped-divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,0 C150,90 350,-40 500,45 C650,120 900,10 1200,50 L1200,120 L0,120 Z" class="shape-fill-navy"></path>
+    </svg>
+  </div>
+
+  <!-- ========================================================================
+       14. Footer
+       ======================================================================== -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row gy-4">
+        
+        <!-- Brand Column -->
+        <div class="col-lg-4 col-md-6 footer-logo">
+          <img src="assets/images/logo-horizontal.png" alt="Frozen1000" height="52">
+          <p class="footer-desc">
+            A revolução do sabor congelante com identidade futurista, ingredientes de verdade e energia cósmica. Junte-se ao Frizz nesta aventura deliciosa!
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://tiktok.com" class="footer-social-btn" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="https://whatsapp.com" class="footer-social-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://youtube.com" class="footer-social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-6">
+          <h4 class="footer-title">Cardápio</h4>
+          <ul class="footer-links">
+            <li><a href="#cardapio">Shakes Galácticos</a></li>
+            <li><a href="#cardapio">Taças & Bowls</a></li>
+            <li><a href="#cardapio">Slushes Sub-Zero</a></li>
+            <li><a href="#cardapio">Linha Turbo / Zero</a></li>
+            <li><a href="#cardapio">Tabela Nutricional</a></li>
+          </ul>
+        </div>
+
+        <!-- Institutional Links -->
+        <div class="col-lg-2 col-6">
+          <h4 class="footer-title">Empresa</h4>
+          <ul class="footer-links">
+            <li><a href="#frizz">O Mascote Frizz</a></li>
+            <li><a href="#conceito">Nossa História</a></li>
+            <li><a href="#lojas">Encontrar Loja</a></li>
+            <li><a href="#franquias">Seja um Franqueado</a></li>
+            <li><a href="#clube-frizz">Clube Frizz App</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-title">Newsletter Galáctica</h4>
+          <p class="small text-white-50">
+            Cadastre seu e-mail para receber lançamentos secretos, cupons surpresa e novidades do Frizz:
+          </p>
+          <form id="newsletterForm" class="newsletter-form-footer">
+            <input type="email" class="newsletter-input" placeholder="Digite seu melhor e-mail..." required>
+            <button type="submit" class="btn btn-f1-pink btn-sm">
+              <i class="bi bi-send-fill"></i> Inscrever
+            </button>
+          </form>
+          <div class="mt-3 small text-info">
+            <i class="bi bi-shield-check"></i> Sem spam. Apenas delícias congelantes!
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 <strong>Frozen1000 Sobremesas e Alimentos S.A.</strong> Todos os direitos reservados.
+        </div>
+        <div class="d-flex gap-3 mt-2 mt-md-0">
+          <a href="#">Termos de Uso</a>
+          <span>•</span>
+          <a href="#">Política de Privacidade</a>
+          <span>•</span>
+          <a href="#">SAC & Ouvidoria</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       15. Floating Actions Bar & Back to Top
+       ======================================================================== -->
+  <div class="floating-actions-bar">
+    <button class="btn-float-order" data-bs-toggle="modal" data-bs-target="#deliveryModal">
+      <i class="bi bi-bag-heart-fill"></i>
+      <span>Pedir Agora</span>
+      <span class="badge bg-white text-dark rounded-pill cart-counter-badge" style="display: none;">0</span>
+    </button>
+    
+    <button class="btn-back-to-top" id="btnBackToTop" title="Voltar ao Topo" aria-label="Voltar ao Topo">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- ========================================================================
+       16. Interactive Product Customizer Modal
+       ======================================================================== -->
+  <div class="modal fade" id="customizeModal" tabindex="-1" aria-labelledby="customizeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title fs-5" id="customizeModalLabel">
+            <i class="bi bi-stars text-primary me-2"></i> Personalize Seu Shake Galáctico
+          </h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row gy-4">
+            
+            <!-- Left: Product Image & Details -->
+            <div class="col-md-5 text-center">
+              <div class="rounded-4 overflow-hidden border border-2 border-dark mb-3 bg-dark">
+                <img src="" id="modalProdImg" alt="Produto selecionado" class="img-fluid" width="300" height="300">
+              </div>
+              <span class="badge bg-primary text-white text-uppercase px-3 py-1 mb-2" id="modalProdCategory">Shakes</span>
+              <h4 class="fw-bold text-navy mb-2" id="modalProdTitle">Nome do Produto</h4>
+              <p class="small text-muted mb-3" id="modalProdDesc">Descrição do produto.</p>
+              
+              <div class="d-flex justify-content-center gap-3 small fw-bold text-muted border-top pt-2">
+                <span><i class="bi bi-fire text-danger"></i> <span id="modalProdCalories">380 kcal</span></span>
+                <span><i class="bi bi-thermometer-snow text-info"></i> <span id="modalProdTemp">-18°C</span></span>
+              </div>
+            </div>
+
+            <!-- Right: Customizer Options -->
+            <div class="col-md-7 ps-md-4">
+              
+              <!-- 1. Size Selection -->
+              <div class="mb-3">
+                <label class="form-label fw-bold text-navy small text-uppercase">1. Escolha o Tamanho:</label>
+                <div class="size-selector-grid">
+                  <div class="size-option-card selected" data-size="300" data-extra="0">
+                    <div class="size-vol">300ml</div>
+                    <div class="size-extra">Padrão</div>
+                  </div>
+                  <div class="size-option-card" data-size="500" data-extra="5.00">
+                    <div class="size-vol">500ml</div>
+                    <div class="size-extra">+R$ 5,00</div>
+                  </div>
+                  <div class="size-option-card" data-size="700" data-extra="9.00">
+                    <div class="size-vol">700ml</div>
+                    <div class="size-extra">+R$ 9,00</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Topping Addons -->
+              <div class="mb-4">
+                <label class="form-label fw-bold text-navy small text-uppercase">2. Turbine com Toppings Extras:</label>
+                
+                <label class="addon-item">
+                  <div class="d-flex align-items-center gap-2">
+                    <input class="form-check-input addon-checkbox" type="checkbox" data-price="3.50">
+                    <span class="fw-semibold">Nuvem de Chantilly de Baunilha</span>
+                  </div>
+                  <span class="text-primary fw-bold">+R$ 3,50</span>
+                </label>
+
+                <label class="addon-item">
+                  <div class="d-flex align-items-center gap-2">
+                    <input class="form-check-input addon-checkbox" type="checkbox" data-price="4.00">
+                    <span class="fw-semibold">Pérolas Explosivas de Fruta</span>
+                  </div>
+                  <span class="text-primary fw-bold">+R$ 4,00</span>
+                </label>
+
+                <label class="addon-item">
+                  <div class="d-flex align-items-center gap-2">
+                    <input class="form-check-input addon-checkbox" type="checkbox" data-price="3.00">
+                    <span class="fw-semibold">Calda Vulcânica Extra de Frutas</span>
+                  </div>
+                  <span class="text-primary fw-bold">+R$ 3,00</span>
+                </label>
+
+                <label class="addon-item">
+                  <div class="d-flex align-items-center gap-2">
+                    <input class="form-check-input addon-checkbox" type="checkbox" data-price="4.50">
+                    <span class="fw-semibold">Crunch de Brownie Belga</span>
+                  </div>
+                  <span class="text-primary fw-bold">+R$ 4,50</span>
+                </label>
+
+                <label class="addon-item">
+                  <div class="d-flex align-items-center gap-2">
+                    <input class="form-check-input addon-checkbox" type="checkbox" data-price="2.50">
+                    <span class="fw-semibold">Glitter Azul Cósmico Comestível</span>
+                  </div>
+                  <span class="text-primary fw-bold">+R$ 2,50</span>
+                </label>
+
+              </div>
+
+              <!-- Price Footer & Add Action -->
+              <div class="d-flex align-items-center justify-content-between p-3 bg-light rounded-4 border">
+                <div>
+                  <span class="d-block small text-muted text-uppercase fw-bold">Valor Total:</span>
+                  <span class="fs-3 fw-bold text-navy" id="modalTotalPrice">R$ 24,90</span>
+                </div>
+                <button class="btn btn-f1-pink btn-lg" id="btnModalAddToCart">
+                  <i class="bi bi-cart-plus-fill me-1"></i> Adicionar ao Pedido
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       17. Delivery / Order Selector Modal
+       ======================================================================== -->
+  <div class="modal fade" id="deliveryModal" tabindex="-1" aria-labelledby="deliveryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title fs-5" id="deliveryModalLabel">
+            <i class="bi bi-bag-check-fill text-primary me-2"></i> Como Você Deseja Pedir?
+          </h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body text-center p-4">
+          <p class="text-muted mb-4">Selecione seu canal favorito para receber suas delícias congeladas:</p>
+          
+          <div class="d-flex flex-column gap-3 mb-4">
+            <!-- iFood -->
+            <a href="https://www.ifood.com.br" target="_blank" rel="noopener" class="p-3 border border-2 border-danger rounded-4 d-flex align-items-center justify-content-between text-dark text-decoration-none shadow-sm hover-shadow">
+              <div class="d-flex align-items-center gap-3">
+                <div class="bg-danger text-white rounded-circle p-2 fs-4" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;">
+                  <i class="bi bi-bicycle"></i>
+                </div>
+                <div class="text-start">
+                  <div class="fw-bold">Pedir pelo iFood</div>
+                  <div class="small text-muted">Entrega rápida em até 35 min</div>
+                </div>
+              </div>
+              <i class="bi bi-chevron-right text-muted"></i>
+            </a>
+
+            <!-- WhatsApp Order -->
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%20Frozen1000!%20Gostaria%20de%20fazer%20um%20pedido%20congelante." target="_blank" rel="noopener" class="p-3 border border-2 border-success rounded-4 d-flex align-items-center justify-content-between text-dark text-decoration-none shadow-sm hover-shadow">
+              <div class="d-flex align-items-center gap-3">
+                <div class="bg-success text-white rounded-circle p-2 fs-4" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;">
+                  <i class="bi bi-whatsapp"></i>
+                </div>
+                <div class="text-start">
+                  <div class="fw-bold">WhatsApp do Frizz</div>
+                  <div class="small text-muted">Atendimento com atendente virtual</div>
+                </div>
+              </div>
+              <i class="bi bi-chevron-right text-muted"></i>
+            </a>
+
+            <!-- Store Pickup -->
+            <a href="#lojas" data-bs-dismiss="modal" class="p-3 border border-2 border-primary rounded-4 d-flex align-items-center justify-content-between text-dark text-decoration-none shadow-sm hover-shadow">
+              <div class="d-flex align-items-center gap-3">
+                <div class="bg-primary text-white rounded-circle p-2 fs-4" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;">
+                  <i class="bi bi-shop"></i>
+                </div>
+                <div class="text-start">
+                  <div class="fw-bold">Retirar na Loja Mais Próxima</div>
+                  <div class="small text-muted">Pule a fila no balcão</div>
+                </div>
+              </div>
+              <i class="bi bi-chevron-right text-muted"></i>
+            </a>
+          </div>
+
+          <div class="small text-muted">
+            <i class="bi bi-stars text-warning me-1"></i> Não esqueça de aplicar o cupom <strong>FRIZZ10</strong>!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       18. Franchise Inquiry Lead Modal
+       ======================================================================== -->
+  <div class="modal fade" id="franchiseModal" tabindex="-1" aria-labelledby="franchiseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title fs-5" id="franchiseModalLabel">
+            <i class="bi bi-briefcase-fill text-primary me-2"></i> Receba o Plano de Negócios
+          </h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="small text-muted mb-3">Preencha seus dados para receber o dossier de franqueado Frozen1000:</p>
+          <form id="franchiseLeadForm">
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Nome Completo:</label>
+              <input type="text" class="form-control" placeholder="Seu nome" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">E-mail Profissional:</label>
+              <input type="email" class="form-control" placeholder="seu@email.com" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">WhatsApp / Telefone:</label>
+              <input type="tel" class="form-control" placeholder="(00) 00000-0000" required>
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-8">
+                <label class="form-label small fw-bold">Cidade de Interesse:</label>
+                <input type="text" class="form-control" placeholder="Ex: Campinas" required>
+              </div>
+              <div class="col-4">
+                <label class="form-label small fw-bold">Estado:</label>
+                <input type="text" class="form-control" placeholder="Ex: SP" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Capital Disponível para Investimento:</label>
+              <select class="form-select" required>
+                <option value="">Selecione...</option>
+                <option value="150k">R$ 150.000 a R$ 250.000</option>
+                <option value="300k">R$ 250.000 a R$ 400.000</option>
+                <option value="500k+">Acima de R$ 400.000</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-f1-pink btn-lg w-100 mt-2">
+              <i class="bi bi-send-check-fill me-2"></i> Enviar Proposta de Expansão
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastNotificationContainer"></div>
+
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Vanilla JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
